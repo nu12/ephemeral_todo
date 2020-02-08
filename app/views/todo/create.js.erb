@@ -1,0 +1,11 @@
+console.log("Including new item <%= @todo[:activity] %>")
+document.querySelector("input#activity").classList.remove("is-danger")
+if("<%= @todo[:activity] %>"){
+	document.querySelector(".todo-list").innerHTML += "<%= j render('todo/todo', todo: @todo) %>"
+	document.querySelector("input#activity").value = ""
+	var id = parseInt(document.querySelector("input#id").value)
+	document.querySelector("input#id").value = id+1	
+}else{
+	document.querySelector("input#activity").classList.add("is-danger")
+}
+

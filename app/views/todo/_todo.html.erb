@@ -1,0 +1,12 @@
+<div class="columns id-<%= @todo[:id] %> todo-item is-size-5 is-capitalized has-text-black-ter is-vcentered">
+	<div class="column is-11">
+		<%= @todo[:activity] %>
+	</div>
+	<div class="column has-text-centered is-1">
+		<%= form_with url: todo_path(@todo[:id]), method: :delete do |f| %>
+			<%= f.button class: "button is-danger" do %>
+				<i class="fas fa-trash"></i>
+			<% end %>
+		<% end %>
+	</div>
+</div>

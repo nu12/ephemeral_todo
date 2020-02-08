@@ -1,0 +1,20 @@
+<div class="container has-text-centered">
+	<h3 class="title">Get something done today</h3>
+
+	<%= form_with url: todo_index_path do |f| %>
+		<%= f.hidden_field :id, {value: 0, readonly: "readonly"} %>
+		<div class="columns">
+			<div class="column is-11">
+				<%= f.text_field :activity, {class: "input",   placeholder: "What to do next..."} %>
+			</div>
+			<div class="column is-1">
+				<%= f.button class: "button is-info" do %>
+					<i class="fas fa-plus"></i>
+				<% end %>
+			</div>
+		</div>
+	<% end %>
+</div>
+<div class="container todo-list">
+	
+</div>
